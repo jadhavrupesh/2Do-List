@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bgReg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SignupController">
+
+    <children>
+        <JFXTextField fx:id="singUpLastName" labelFloat="true" layoutX="370.0" layoutY="120.0" prefHeight="20.0" prefWidth="120.0" promptText="Last-name" />
+        <JFXTextField fx:id="signUpFirstName" labelFloat="true" layoutX="210.0" layoutY="120.0" prefHeight="20.0" prefWidth="120.0" promptText="First-name" />
+        <JFXTextField fx:id="signUpUsername" labelFloat="true" layoutX="210.0" layoutY="160.0" prefHeight="20.0" prefWidth="280.0" promptText="UserName" />
+        <JFXPasswordField fx:id="signUpPassword" labelFloat="true" layoutX="211.0" layoutY="200.0" prefHeight="25.0" prefWidth="280.0" promptText="Password" />
+        <JFXTextField fx:id="signUpLocation" labelFloat="true" layoutX="210.0" layoutY="270.0" prefHeight="20.0" prefWidth="280.0" promptText="Location" />
+        <JFXCheckBox fx:id="singUpCheckBoxMale" layoutX="260.0" layoutY="240.0" onMouseClicked="#selectedMale" text="Male" />
+        <JFXCheckBox fx:id="singUpCheckBoxFemale" layoutX="380.0" layoutY="240.0" onMouseClicked="#selectedFemale" text="Female" />
+        <JFXButton fx:id="signUpButton" buttonType="RAISED" layoutX="266.0" layoutY="314.0" prefHeight="37.0" prefWidth="171.0" style="-fx-background-radius: 30;" stylesheets="@Style.css" text="Create a new Account ??" textFill="WHITE" wrapText="true" />
+        <Label layoutX="289.0" layoutY="30.0" text="2Do-List" textFill="#524bdde5" wrapText="true">
+            <font>
+                <Font name="Bauhaus 93" size="36.0" />
+            </font>
+        </Label>
+      <JFXButton fx:id="loginSignupButton" layoutX="273.0" layoutY="361.0" onAction="#alreadyhaveAccount" text="Already have An Account ?" textFill="#4a39dd" />
+    </children>
+
+
+</AnchorPane>

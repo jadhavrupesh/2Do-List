@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="326.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.UpdateTaskController">
+   <children>
+      <JFXTextField fx:id="updateTaskField" focusColor="#1b1e1d" labelFloat="true" layoutX="31.0" layoutY="117.0" prefHeight="35.0" prefWidth="339.0" promptText="Task" unFocusColor="#524bdd">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="updateDescriptionField" focusColor="#1b1b1b" labelFloat="true" layoutX="31.0" layoutY="195.0" prefHeight="29.0" prefWidth="339.0" promptText="Description" unFocusColor="#524bdd">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutY="-5.0" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: #524bdd;" text="2DO Update" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <JFXButton fx:id="updateTaskButton" buttonType="RAISED" layoutX="142.0" layoutY="259.0" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #524bdd; -fx-background-radius: 30;" text="Update Task" textFill="WHITE" />
+   </children>
+</AnchorPane>

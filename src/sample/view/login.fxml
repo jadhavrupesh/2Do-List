@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="bgLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-radius: 30;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.LoginController">
+   <children>
+      <JFXTextField fx:id="loginUsername" labelFloat="true" layoutX="257.0" layoutY="147.0" onMouseClicked="#userclick" prefHeight="25.0" prefWidth="186.0" promptText="UserName">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="loginPassword" labelFloat="true" layoutX="258.0" layoutY="188.0" onMouseClicked="#passClick" prefHeight="25.0" prefWidth="186.0" promptText="Password">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXPasswordField>
+      <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="292.0" layoutY="246.0" prefHeight="37.0" prefWidth="118.0" style="-fx-background-radius: 30;" text="LogIn ⇢" textFill="WHITE" wrapText="true" />
+      <Label layoutX="289.0" layoutY="30.0" text="2Do-List" textFill="#524bdde5" wrapText="true">
+         <font>
+            <Font name="Bauhaus 93" size="36.0" />
+         </font>
+      </Label>
+      <Text fx:id="loginSignupButton" fill="#615e5e" layoutX="292.0" layoutY="311.0" onMouseClicked="#Create_Account" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new Account ⇢">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

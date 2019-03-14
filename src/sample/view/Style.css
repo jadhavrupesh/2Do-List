@@ -1,0 +1,68 @@
+.root{
+
+}
+
+
+#cell:hover{
+    -fx-background-color: #000;
+
+}
+
+#listTask{
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+}
+
+#bgadd{
+    -fx-background-color: transparent;
+}
+
+
+
+#bglist{
+    -fx-background-image:url("/sample/assets/bg/image_preview-1024x576.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+
+}
+
+#paneRoot{
+    -fx-background-image:url("/sample/assets/bg/Scree.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+
+}
+
+#bgReg{
+    -fx-background-image:url("/sample/assets/bg/artboard.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+
+#bgLogin{
+ -fx-background-color:transparent;
+    -fx-background-image:url("/sample/assets/bg/welcome-to-stride-7.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+
+}
+
+#loginButton {
+    -fx-background-color: #524bdd;
+}
+
+#loginButton:hover{
+    -fx-background-color: #5e61ee;
+}
+
+#signUpButton{
+    -fx-background-color: #524bdd;
+}
+
+#loginSignupButton:hover{
+    -fx-fill: #524bdd;
+}
+
