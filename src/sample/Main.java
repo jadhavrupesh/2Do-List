@@ -17,6 +17,7 @@ public class Main extends Application {
         scene.getStylesheets().addAll("sample/view/Style.css");
         primaryStage.setResizable(false);
         primaryStage.show();
+
     }
 
 
