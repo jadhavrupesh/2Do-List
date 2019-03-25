@@ -19,6 +19,32 @@ public class DatabaseHandler extends Configs {
         return dbConnection;
     }
 
+
+    public ResultSet search(String task){
+
+        ResultSet resultTasks = null;
+
+        String query = "SELECT * FROM " + Const.TASKS_TABLE + " WHERE "
+                + Const.TASKS_TASK + "=? order by " + Const.TASKS_ID +" desc";
+
+        try {
+            PreparedStatement preparedStatement = getDbConnection().prepareStatement(query);
+
+            preparedStatement.setString(1, task);
+
+
+            resultTasks = preparedStatement.executeQuery();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return resultTasks;
+
+
+
+    }
+
     public void updateTask(Timestamp datecreated, String description, String task, int taskId) throws SQLException, ClassNotFoundException {
 
         String query = "UPDATE tasks SET datecreated=?, description=?, task=? WHERE taskid=?";

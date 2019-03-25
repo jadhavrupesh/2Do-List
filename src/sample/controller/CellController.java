@@ -1,7 +1,10 @@
 package sample.controller;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXListCell;
+import com.jfoenix.controls.JFXTextField;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -22,6 +25,8 @@ import java.sql.SQLException;
 import java.util.Calendar;
 
 public class CellController extends JFXListCell<Task> {
+
+
 
 
     @FXML
@@ -53,7 +58,16 @@ public class CellController extends JFXListCell<Task> {
     void initialize() throws SQLException {
 
 
+
+
+
     }
+
+
+
+
+
+
 
     @Override
     public void updateItem(Task myTask, boolean empty) {

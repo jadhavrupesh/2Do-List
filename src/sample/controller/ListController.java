@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXListView;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -41,6 +42,49 @@ public class ListController {
 
     @FXML
     private JFXButton listLogout;
+
+    @FXML
+    private JFXTextField search;
+
+    @FXML
+    private JFXButton searchBtn;
+
+    @FXML
+    void dosearch(ActionEvent event) throws SQLException {
+
+        databaseHandler = new DatabaseHandler();
+        String tast=search.getText().toString();
+//        ResultSet resultSet = databaseHandler.getTasksByUser(AddItemController.userId);
+        ResultSet resultSet = databaseHandler.search(tast);
+
+
+
+        System.out.println("initialize called");
+
+        tasks = FXCollections.observableArrayList();
+
+
+
+
+
+        while (resultSet.next()) {
+            Task task = new Task();
+            task.setTaskId(resultSet.getInt("taskid"));
+            task.setTask(resultSet.getString("task"));
+            task.setDatecreated(resultSet.getTimestamp("datecreated"));
+            task.setDescription(resultSet.getString("description"));
+            tasks.addAll(task);
+        }
+
+
+        listTask.setItems(tasks);
+
+        listTask.setCellFactory(CellController -> new CellController());
+
+
+
+    }
+
 
 
 

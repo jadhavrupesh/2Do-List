@@ -27,13 +27,13 @@
             <Blend />
          </effect>
       </AnchorPane>
-      <JFXListView fx:id="listTask" layoutX="304.0" layoutY="75.0" prefHeight="325.0" prefWidth="396.0" stylesheets="@scroll.css" />
+      <JFXListView fx:id="listTask" layoutX="305.0" layoutY="129.0" prefHeight="271.0" prefWidth="396.0" stylesheets="@scroll.css" />
       <AnchorPane prefHeight="75.0" prefWidth="700.0" style="-fx-background-color: #524bdd;">
          <effect>
             <DropShadow />
          </effect>
          <children>
-            <Label layoutX="283.0" layoutY="14.0" text="2Do-List" textFill="WHITE">
+            <Label layoutX="234.0" layoutY="18.0" text="2Do-List" textFill="WHITE">
                <font>
                   <Font size="32.0" />
                </font>
@@ -47,5 +47,7 @@
             <JFXButton fx:id="listLogout" buttonType="RAISED" layoutX="608.0" layoutY="8.0" prefHeight="29.0" prefWidth="73.0" style="-fx-background-color: #ffff; -fx-background-radius: 30;" text="Logout" textFill="#524bdd" />
          </children>
       </AnchorPane>
+      <JFXTextField fx:id="search" layoutX="427.0" layoutY="86.0" />
+      <JFXButton fx:id="searchBtn" buttonType="RAISED" layoutX="603.0" layoutY="87.0" onAction="#dosearch" style="-fx-background-color: #fff;" text="Search" textFill="#4533eb" />
    </children>
 </AnchorPane>
