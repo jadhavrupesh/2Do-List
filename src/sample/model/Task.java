@@ -9,8 +9,6 @@ public class Task {
     private Timestamp datecreated;
     private String description;
     private String task;
-
-
     public Task() {
     }
 

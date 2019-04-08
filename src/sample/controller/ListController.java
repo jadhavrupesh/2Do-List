@@ -53,20 +53,11 @@ public class ListController {
     void dosearch(ActionEvent event) throws SQLException {
 
         databaseHandler = new DatabaseHandler();
-        String tast=search.getText().toString();
+        String tast = search.getText().toString();
 //        ResultSet resultSet = databaseHandler.getTasksByUser(AddItemController.userId);
         ResultSet resultSet = databaseHandler.search(tast);
-
-
-
         System.out.println("initialize called");
-
         tasks = FXCollections.observableArrayList();
-
-
-
-
-
         while (resultSet.next()) {
             Task task = new Task();
             task.setTaskId(resultSet.getInt("taskid"));
@@ -75,19 +66,9 @@ public class ListController {
             task.setDescription(resultSet.getString("description"));
             tasks.addAll(task);
         }
-
-
         listTask.setItems(tasks);
-
         listTask.setCellFactory(CellController -> new CellController());
-
-
-
     }
-
-
-
-
 
     @FXML
     void initialize() throws SQLException {
@@ -145,7 +126,6 @@ public class ListController {
         });
 
 
-
     }
 
     public void refreshList() throws SQLException {
@@ -165,55 +145,37 @@ public class ListController {
             task.setTask(resultSet.getString("task"));
             task.setDatecreated(resultSet.getTimestamp("datecreated"));
             task.setDescription(resultSet.getString("description"));
-
             refreshedTasks.addAll(task);
 
         }
-
-
         listTask.setItems(refreshedTasks);
         listTask.setCellFactory(CellController -> new CellController());
-
     }
 
     public void addNewTask() {
 
-             if (!listTaskField.getText().equals("")
-                     || !listDescriptionField.getText().equals("")) {
-                 Task myNewTask = new Task();
+        if (!listTaskField.getText().equals("")
+                || !listDescriptionField.getText().equals("")) {
+            Task myNewTask = new Task();
+            Calendar calendar = Calendar.getInstance();
 
+            Timestamp timestamp =
+                    new Timestamp(calendar.getTimeInMillis());
 
-
-                 Calendar calendar = Calendar.getInstance();
-
-                 Timestamp timestamp =
-                         new Timestamp(calendar.getTimeInMillis());
-
-
-                 myNewTask.setUserId(AddItemController.userId);
-                 myNewTask.setTask(listTaskField.getText().trim());
-                 myNewTask.setDescription(listDescriptionField.getText().trim());
-                 myNewTask.setDatecreated(timestamp);
-
-                 databaseHandler.insertTask(myNewTask);
-
-                 listTaskField.setText("");
-                 listDescriptionField.setText("");
-
-                 try {
-                     initialize();
-                 } catch (SQLException e) {
-                     e.printStackTrace();
-                 }
-
-
-             }
-
-
+            myNewTask.setUserId(AddItemController.userId);
+            myNewTask.setTask(listTaskField.getText().trim());
+            myNewTask.setDescription(listDescriptionField.getText().trim());
+            myNewTask.setDatecreated(timestamp);
+            databaseHandler.insertTask(myNewTask);
+            listTaskField.setText("");
+            listDescriptionField.setText("");
+            try {
+                initialize();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
-
-
-
 }
 
 

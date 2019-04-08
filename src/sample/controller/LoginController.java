@@ -60,10 +60,7 @@ public class LoginController {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.showAndWait();
-
     }
-
-
     @FXML
     private JFXButton loginButton;
     private DatabaseHandler databaseHandler;
@@ -121,7 +118,6 @@ public class LoginController {
                     e.printStackTrace();
                 }
             }
-
             else {
                 Shaker userNameShaker = new Shaker(loginUsername);
                 Shaker passwordShaker = new Shaker(loginPassword);
@@ -131,9 +127,6 @@ public class LoginController {
                 loginPassword.setStyle("-jfx-focus-color: #ff2a25;");
                 wrongInp();
             }
-
-
-
         });
     }
     private void showAddItemScreen() {
@@ -158,8 +151,6 @@ public class LoginController {
 
         stage.showAndWait();
     }
-
-
     private void wrongInp() {
         loginUsername.setStyle("-fx-text-fill: #2c2c2c;");
         loginPassword.setStyle("-fx-text-fill: #2c2c2c;");

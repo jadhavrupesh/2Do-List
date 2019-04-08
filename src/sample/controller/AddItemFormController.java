@@ -23,31 +23,20 @@ public class AddItemFormController {
     private int userId;
 
     private DatabaseHandler databaseHandler;
-
-
     @FXML
     private JFXTextField taskField;
-
     @FXML
     private JFXTextField descriptionField;
-
     @FXML
     private JFXButton saveTaskButton;
-
     @FXML
     private AnchorPane rootPane;
-
-
     @FXML
     private Label successLabel;
-
     @FXML
     private JFXButton todosButton;
-
     @FXML
     private JFXButton taskLogoutButton;
-
-
     @FXML
     void initialize() {
 
@@ -67,12 +56,8 @@ public class AddItemFormController {
             stage.setScene(new Scene(root));
             stage.showAndWait();
         });
-
-
         databaseHandler = new DatabaseHandler();
         Task task = new Task();
-
-
         saveTaskButton.setOnAction(event -> {
 
             Calendar calendar = Calendar.getInstance();
@@ -106,7 +91,7 @@ public class AddItemFormController {
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
-               todosButton.setText("My 2Do's: " + "(" + taskNumber + ")");
+                todosButton.setText("My 2Do's: " + "(" + taskNumber + ")");
 
 
                 taskField.setText("");
@@ -116,10 +101,10 @@ public class AddItemFormController {
                     //send users to the list screen
 
                     try {
-                        AnchorPane pane=FXMLLoader.load(getClass().getResource("/sample/view/list.fxml"));
-                       // pane.setMaxSize(700,400);
+                        AnchorPane pane = FXMLLoader.load(getClass().getResource("/sample/view/list.fxml"));
+                        // pane.setMaxSize(700,400);
                         rootPane.getChildren().setAll(pane);
-                        rootPane.setMaxSize(700,400);
+                        rootPane.setMaxSize(700, 400);
 
 
                     } catch (IOException e) {
@@ -141,20 +126,12 @@ public class AddItemFormController {
 //                    stage.setScene(new Scene(root));
 //
 //                    stage.showAndWait();
-
                 });
-
-                 System.out.println("Task Added Successfully!");
-
-
+                System.out.println("Task Added Successfully!");
             } else {
                 System.out.println("Nothing added!");
-
             }
-
         });
-
-
     }
 
     public int getUserId() {

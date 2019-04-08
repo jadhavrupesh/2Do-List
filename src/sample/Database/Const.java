@@ -14,7 +14,6 @@ public class Const {
     public static final String USERS_LOCATION = "location";
     public static final String USERS_GENDER = "gender";
 
-
     //TASKS Table Column Names
     public static final String TASKS_ID = "taskid";
     public static final String TASKS_DATE = "datecreated";

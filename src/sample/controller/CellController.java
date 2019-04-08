@@ -25,10 +25,6 @@ import java.sql.SQLException;
 import java.util.Calendar;
 
 public class CellController extends JFXListCell<Task> {
-
-
-
-
     @FXML
     private AnchorPane rootAnchorPane;
 
@@ -56,18 +52,7 @@ public class CellController extends JFXListCell<Task> {
 
     @FXML
     void initialize() throws SQLException {
-
-
-
-
-
     }
-
-
-
-
-
-
 
     @Override
     public void updateItem(Task myTask, boolean empty) {
@@ -92,20 +77,15 @@ public class CellController extends JFXListCell<Task> {
                      e.printStackTrace();
                  }
              }
-
              taskLabel.setText(myTask.getTask());
              dateLabel.setText(myTask.getDatecreated().toString());
              descriptionLabel.setText(myTask.getDescription());
 
              int taskId = myTask.getTaskId();
-
-
              listUpdateButton.setOnMouseClicked(event -> {
 
                 FXMLLoader loader = new FXMLLoader();
                 loader.setLocation(getClass().getResource("/sample/view/updateTaskForm.fxml"));
-
-
                  try {
                      loader.load();
                  } catch (IOException e) {
@@ -145,15 +125,9 @@ public class CellController extends JFXListCell<Task> {
                  });
 
                  stage.show();
-
-
              });
-
-
              deleteButton.setOnMouseClicked(event -> {
-
                  try {
-
                      databaseHandler.deleteTask(AddItemController.userId,taskId);
 
                  } catch (SQLException e) {
@@ -162,13 +136,9 @@ public class CellController extends JFXListCell<Task> {
                      e.printStackTrace();
                  }
                  getListView().getItems().remove(getItem());
-
              });
-
              setText(null);
              setGraphic(rootAnchorPane);
-
-
         }
     }
 

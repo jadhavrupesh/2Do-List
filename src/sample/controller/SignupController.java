@@ -30,8 +30,6 @@ public class SignupController {
 
     @FXML
     private URL location;
-
-
     @FXML
     private JFXTextField singUpLastName;
 
@@ -62,8 +60,6 @@ public class SignupController {
     @FXML
     private JFXButton loginSignupButton;
 
-
-
     @FXML
     void selectedFemale(MouseEvent event) {
         gender="Female";
@@ -89,9 +85,6 @@ public class SignupController {
         stage.setScene(new Scene(root));
         stage.show();
     }
-
-
-
     @FXML
     void initialize() {
         signUpButton.setOnAction(event -> {
@@ -102,8 +95,6 @@ public class SignupController {
             String password = signUpPassword.getText();
             String location = signUpLocation.getText();
             String chkgender = gender;
-
-
             if (!name.trim().equals("") && !lastName.trim().equals("") &&
                     !userName.trim().equals("")&& !password.trim().equals("") && !location.trim().equals("") && !chkgender.equals("")) {
                 createUser();
@@ -133,7 +124,6 @@ public class SignupController {
                 passwordShaker.shake();
                 userNameShaker.shake();
                 signUpPassword.clear();
-
                 System.out.println("Fill form");
             }
 

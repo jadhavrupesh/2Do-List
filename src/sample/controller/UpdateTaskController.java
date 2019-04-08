@@ -11,16 +11,10 @@ public class UpdateTaskController {
 
     @FXML
     private JFXTextField updateDescriptionField;
-
     @FXML
     public JFXButton updateTaskButton;
-
-
     @FXML
     void initialize() {
-
-
-
     }
 
     public void setTaskField(String task) {

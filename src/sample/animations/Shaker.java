@@ -6,7 +6,6 @@ import javafx.util.Duration;
 
 public class Shaker {
     private TranslateTransition translateTransition;
-
     public Shaker(Node node) {
         translateTransition =
                 new TranslateTransition(Duration.millis(50), node);
@@ -16,7 +15,6 @@ public class Shaker {
         translateTransition.setAutoReverse(true);
 
     }
-
     public void shake() {
         translateTransition.playFromStart();
     }

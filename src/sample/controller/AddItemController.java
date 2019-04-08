@@ -62,7 +62,6 @@ public class AddItemController {
           labelTransition.setAutoReverse(false);
           labelTransition.play();
 
-
           try {
 
               AnchorPane formPane =
@@ -81,20 +80,12 @@ public class AddItemController {
               rootTransition.setAutoReverse(false);
               rootTransition.play();
               paneRoot.getChildren().setAll(formPane);
-
-
           } catch (IOException e) {
               e.printStackTrace();
           }
 
-
       });
-
-
-
     }
-
-
     public void setUserId(int userId) {
 
         this.userId = userId;
