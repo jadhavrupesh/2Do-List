@@ -166,10 +166,6 @@ public class DatabaseHandler extends Configs {
             e.printStackTrace();
         }
     }
-    //Read
 
-    //Update
-
-    //Delete
 
 }
